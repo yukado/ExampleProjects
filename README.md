@@ -1,2 +1,2 @@
-# ExampleProjects
-Some Java Example Projects
+# Rubik-Cube-JFX
+
