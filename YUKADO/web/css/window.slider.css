@@ -1,0 +1,107 @@
+.window-slider{
+    max-width: 67%;
+    max-height: 800px;
+    position: relative;
+    margin: auto;
+    margin-right: 7%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+   
+}
+.tl-window{
+    border: solid 5px white;
+    border-right: solid 2.5px white;
+    border-bottom: solid 2.5px white;
+    
+}
+.tr-window{
+    border: solid 5px white;
+    border-left: solid 2.5px white;
+    border-bottom: solid 2.5px white;
+    
+}
+.bl-window{
+    border: solid 5px white;
+    border-right: solid 2.5px white;
+    border-top: solid 2.5px white;
+    
+   
+}
+.br-window{
+    border: solid 5px white;
+    border-left: solid 2.5px white;
+    border-top: solid 2.5px white;
+    
+}
+.window-slider > div:nth-child(odd){
+    float: left;
+}
+.window-slider > div:nth-child(even){
+    float: right;
+}
+.window-slider > div{
+    position:relative;
+    width: 443px;
+    height: 230px;
+    overflow: hidden;
+}
+.window-slider > div > img{
+    position: relative;
+    width: 443px;
+    height: 230px;
+}
+.window-slider > div > img:nth-child(n+2){
+    display: none;
+}
+#leftside {
+	
+	}
+#leftsideNav  {
+	
+	font-family:"Droid",Arial, Helvetica, sans-serif;
+	font-size:17px;
+	border-radius:7px;
+	background-image: url("../img/aluminum.jpg");
+	margin:15px 0px;
+        text-shadow: 0 1px 0 blue;
+	-webkit-box-shadow:0 0 13px #0000cc;
+	-moz-box-shadow:0 0 13px #0000cc;
+	padding:2px;
+	}
+	
+#leftside p {
+	margin:0px;
+	padding:10px 0px;
+	background:#FFF;
+	color:#333;
+	
+	}
+#leftside h1 {
+	margin:0px;
+	padding:10px 0px;
+	background:#FFF;
+	color:#333;
+	
+	}
+#leftside ul li {
+	padding:10px 0px;
+	border-bottom:1px solid black;
+        font-variant: small-caps;
+	}
+#leftside ul li a {
+	margin-left:10px;
+	padding:7px 7px;
+	-webkit-transition:.3s all ease-in-out;
+	-moz-transition:.3s all ease-in-out;
+	}
+#leftside ul li a:hover {
+	-webkit-box-shadow: inset 0 0 10px #1a1aff;
+	-moz-box-shadow: inset 0 0 5px #1a1aff;
+	border-radius:7px;
+	border-radius:0px 10px 0px 10px;
+	color:#00cccc;
+	-webkit-transition:.3s all ease-in-out;
+	-moz-transition:.3s all ease-in-out;
+	text-shadow: 0 -1px 0 #0000cc;
+        background-image: url("../img/metal.png");
+	}
