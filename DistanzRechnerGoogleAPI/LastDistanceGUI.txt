@@ -1,0 +1,182 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.JTextComponent;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextPane;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+import javax.swing.JTextArea;
+import java.awt.Color;
+import javax.swing.UIManager;
+import javax.swing.SwingConstants;
+
+
+public class Jdist extends JFrame {
+
+	private static final JTextComponent JlblNewLabel_1 = null;
+	public static JPanel contentPane;
+	public static JTextField textField;
+	public static JTextField textField_1;
+public static Integer km;
+public static String Ergebnis;
+private JLabel lblNewLabel_1;
+private JLabel lblNewLabel_2;
+private JLabel lblNewLabel_3;
+private JLabel lblNewLabel_4;
+private JLabel lblNewLabel_5;
+
+
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Jdist frame = new Jdist();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Jdist() {
+		setFont(new Font("Dialog", Font.PLAIN, 16));
+		setTitle("GoDiRe");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 548, 488);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.BLACK);
+		contentPane.setForeground(Color.WHITE);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField.setBounds(58, 50, 389, 39);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("Ursprungsadresse eingeben");
+		lblNewLabel.setForeground(Color.ORANGE);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(95, 11, 305, 39);
+		contentPane.add(lblNewLabel);
+		
+		lblNewLabel_2 = new JLabel("Zieladresse eingeben");
+		lblNewLabel_2.setForeground(UIManager.getColor("EditorPane.selectionBackground"));
+		lblNewLabel_2.setBackground(Color.BLACK);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2.setBounds(97, 123, 259, 39);
+		contentPane.add(lblNewLabel_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField_1.setBounds(58, 162, 389, 39);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JButton btnEntfernungAnzeigen = new JButton("START");
+		btnEntfernungAnzeigen.setForeground(new Color(0, 0, 139));
+		btnEntfernungAnzeigen.setBackground(new Color(211, 211, 211));
+		btnEntfernungAnzeigen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			       
+				String von = textField.getText();
+			        String nach = textField_1.getText();
+			 
+			        String urlString = "http://maps.google.com/maps/api/directions/xml?origin=" + von + "&destination=" + nach + "&sensor=false";
+			 
+			        DocumentBuilder builder = null;
+					try {
+						builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+					} catch (ParserConfigurationException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			        Document doc = null;
+					try {
+						doc = builder.parse(urlString);
+					} catch (SAXException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			 
+			        NodeList nodes = doc.getElementsByTagName("distance");
+			        Element distanceElement = (Element) nodes.item(nodes.getLength() - 1);
+			        Element meterElement = (Element) distanceElement.getElementsByTagName("value").item(0);
+			         
+			         int meterValue = Integer.parseInt(meterElement.getTextContent());
+			        km = meterValue / 1000;
+			        
+			
+			 lblNewLabel_1.setText(String.valueOf(km) + " Kilometer");
+			     
+			 }
+				
+				
+		
+		});
+		btnEntfernungAnzeigen.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnEntfernungAnzeigen.setBounds(178, 251, 138, 53);
+		contentPane.add(btnEntfernungAnzeigen);
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setForeground(Color.CYAN);
+		lblNewLabel_1.setLabelFor(this);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 57));
+		lblNewLabel_1.setBounds(4, 315, 443, 84);
+		contentPane.add(lblNewLabel_1);
+		
+		lblNewLabel_3 = new JLabel("Software designed and developed by YUKADO (Yusuf Kagan Dogruyol).");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setForeground(new Color(255, 69, 0));
+		lblNewLabel_3.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 16));
+		lblNewLabel_3.setBounds(23, 397, 459, 53);
+		contentPane.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("z.B.: Ruesselsheim,Deutschland");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_4.setForeground(Color.ORANGE);
+		lblNewLabel_4.setBounds(58, 89, 389, 30);
+		contentPane.add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("z.B.: Istanbul,Turkei");
+		lblNewLabel_5.setForeground(new Color(30, 144, 255));
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_5.setBounds(58, 207, 389, 22);
+		contentPane.add(lblNewLabel_5);
+		
+        
+		
+	}	
+}
