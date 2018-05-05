@@ -7,12 +7,12 @@ import javax.mail.internet.MimeMessage;
 public class Mailer {
 public static void send(String to,String subject,String msg){
 
-final String user="yukado@live.de";//change accordingly
-final String pass="SdeedS:isneS1409!";
+final String user="your email";//change accordingly
+final String pass="your password";
 
 //1st step) Get the session object	
 Properties props = new Properties();
-props.put("smtp.live.com", "yukado@live.de");//change accordingly
+props.put("smtp.live.com", "your email");//change accordingly
 props.put("mail.smtp.auth", "true");
 
 Session session = Session.getDefaultInstance(props,
