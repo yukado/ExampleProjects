@@ -2,7 +2,7 @@
 Frontand der applikation ist mit JavaFX aufgebaut und die Services werden durch Spring Boot in Gang gebracht.
 Die App demonstriet eine simple CRUD Operation und switched zwischen Szenen wie Login und User Daschbord.
 
-1. Clone oder Downloade das Projekt in dein Workspace mit command - git clone https://github.com/yukado/ExampleProjects/JavaFXSpringBoot.git
+1. Clone oder Downloade das Projekt in dein Workspace mit command - git clone https://github.com/yukado/ExampleProjects/JavaFXSpringBoot
 2. Als Netbeans Project öffnen.
 3. application.properties öffenen und MySQL configuroieren.
 4. dependencies downloaden, clean, build und run.
