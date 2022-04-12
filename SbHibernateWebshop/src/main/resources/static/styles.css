@@ -1,0 +1,781 @@
+html {
+    background: white;
+}
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    max-width: 100%;
+    
+    background: white;
+    
+    text-align:center;
+}
+  
+.page-title  {
+    font-size:120%;
+    text-align: center;
+    margin:10px 0px;
+}
+.header-container {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    background: #5f5f5f;
+    color: white;
+}
+.header-container .header-bar  {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.header-container .header-bar  a  {
+    color: white;
+    font-size: bold;
+}
+  
+footer{
+	position: relative;
+	
+	float: bottom;
+	margin-bottom: 0;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
+
+.logo{
+	padding: 5px;
+	width: 120px;
+}
+.menu-container {
+	
+    width:100%;
+    
+}
+
+.menu-container a {
+    
+    
+    text-decoration: none;
+}
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu .main-menu {
+  display: none;
+}
+
+#tm:checked + .main-menu {
+  display: block;
+}
+
+#menu input[type="checkbox"], 
+#menu ul span.drop-icon {
+  display: none;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu .sub-menu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .05);
+}
+
+#menu li, 
+#toggle-menu {
+  border-width: 0 0 1px;
+}
+
+#menu .sub-menu {
+  background-color: #444;
+  border-width: 1px 1px 0;
+  margin: 0 10px;
+}
+
+#menu .sub-menu li:last-child {
+  border-width: 0;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu a {
+  position: relative;
+  display: block;
+  color: white;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+  background-color: #292c2f;
+  text-decoration: none;
+  
+}
+
+#menu, 
+#toggle-menu {
+  background-color: transparent;
+}
+
+#toggle-menu, 
+#menu a {
+  padding: 0px 10px;
+  font-size: 25px;
+}
+
+#menu a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+  font-size: 25px;
+}
+
+#menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+#menu .sub-menu {
+  display: none;
+}
+
+#menu input[type="checkbox"]:checked + .sub-menu {
+  display: block;
+}
+
+#menu .sub-menu a:hover {
+  color: #444;
+}
+
+#toggle-menu .drop-icon, 
+#menu li label.drop-icon {
+  position: absolute;
+  right: 50px;
+  top: 10px;;
+}
+
+#menu label.drop-icon, #toggle-menu span.drop-icon {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .125);
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, .75);
+}
+
+#menu .drop-icon {
+  line-height: 1;
+}
+@media only screen and (max-width: 64em) and (min-width: 52.01em) {
+  #menu li {
+    width: 33.333%;
+  }
+
+  #menu .sub-menu li {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #menu .main-menu {
+    display: block;
+  }
+
+  #toggle-menu, 
+  #menu label.drop-icon {
+    display: none;
+  }
+
+  #menu ul span.drop-icon {
+    display: inline-block;
+  }
+
+  #menu li {
+    float: left;
+    border-width: 0 1px 0 0;
+  }
+
+  #menu .sub-menu li {
+    float: none;
+  }
+
+  #menu .sub-menu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #menu .sub-menu, 
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: none;
+  }
+
+  #menu .sub-menu li {
+    border-width: 0 0 1px;
+  }
+ #menu .sub-menu li a{
+    font-size: 20px;
+  }
+  #menu .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+  }
+
+  #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+}
+  
+.site-name {
+    float:left;
+    margin-left:10px;
+      
+}
+  
+.container  {
+    margin: 0px 0px;
+}
+  
+.demo-container, .login-container, .account-container {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align:left;
+    margin:20px 0px;
+}
+  
+.customer-info-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0px 5px;
+}
+.product-preview-container {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 250px;
+    margin: 10px ;
+    display: inline-block;
+    text-align:left;
+}
+  
+.product-preview-container input {
+    width: 50px;
+}
+  
+  
+.product-image {
+    width: 120px;
+    height: 80px;
+}
+  
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+    margin:5px;
+}
+  
+  
+.navi-item {
+    margin: 5px 5px 5px 20px;
+}
+  
+.button-update-sc {
+    color: red;
+    margin: 5px 5px 5px 20px;
+}
+  
+.button-send-sc {
+    color: red;
+    margin: 5px 5px 5px 20px;
+}
+  
+.error-message {
+    font-size: 90%;
+    color: red;
+    font-style: italic;
+}
+  
+.price {
+    color: blue;
+    font-weight: bold;
+}
+  
+.subtotal {
+    color: red;
+    font-weight: bold;
+}
+  
+.total {
+    color: red;
+    font-weight: bold;
+    font-size: 120%;
+}
+  
+table td {
+    padding: 5px;
+}
+
+
+.content{
+  z-index: 3000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+#ninja-slider {
+    width:100%;
+    height:500px;
+    background:#FFF;
+    padding: 0!important;
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider .slider-inner {
+    /*max-width:720px;*/
+    margin:0 auto;/*center-aligned */
+    font-size:0px;
+    position:relative;
+    box-sizing:border-box;
+}
+
+#ninja-slider ul {
+    position:relative;
+    list-style:none;
+    padding:0;
+    box-sizing:border-box;
+    background:black;
+}
+
+#ninja-slider li {    
+    width:100%;
+    height:500px;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+
+#ninja-slider li.ns-show {
+    opacity:1;
+}
+
+
+/* --------- slider image ------- */  
+#ninja-slider .ns-img {
+    background-color:rgba(0,0,0,0.8);
+    background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
+
+    /*box-shadow: 0 1px 5px rgba(0,0,0,.8),inset 0 0 2px rgba(255,255,255,.4);*/
+    border-radius:4px;
+
+    cursor:default;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+
+/*---------- Captions -------------------*/
+
+#ninja-slider .caption {
+    font-size:10em;
+    font-family: 'Bree Serif', sans-serif;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    color:rgba(255,255,255,0.8);
+    bottom:20%;
+}
+#ninja-slider li.ns-show .caption {
+    /* 5s = (delay + transitionSpeed) set in the ninja-slider.js */
+    -webkit-animation: titleAnimation 5s linear both;
+    animation: titleAnimation 5s linear both;
+}
+
+#ninja-slider li.sl-0 .caption { 
+    /*delay caption animation for the initial slide*/
+    -webkit-animation: none;
+    animation: none;
+    display:none;
+}
+
+@keyframes titleAnimation { 
+	0% { opacity:0; }
+	10% { opacity:0;transform: translateY(-20%);}
+	20% { opacity:1;transform: translateY(0%);}
+	70% {opacity:1;transform: translateY(0%);}
+	80% {opacity:0;transform: translateY(100%);}
+	100% {opacity:0;transform: translateY(100%);}
+}
+
+@-webkit-keyframes titleAnimation { 
+	0% { opacity:0; }
+	10% { opacity:0; -webkit-transform:translateY(-20%);}
+	25% { opacity:1; -webkit-transform:translateY(0%);}
+	70% {opacity:1; -webkit-transform:translateY(0%);}
+	80% {opacity:0; -webkit-transform:translateY(100%);}
+	100% {opacity:0; -webkit-transform:translateY(100%);}
+}
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+/* Usually the ninja-slider.js will create the arrow buttons and pager(nav dots) automatically, unless you have added their markup manually to the HTML as this demo did.
+   This demo has put them inside a DIV.navWrapper. 
+*/  
+
+div.navsWrapper {
+    position:absolute;
+    width:100px;
+    height:50px;
+    right:90px;
+    bottom:9%;
+    z-index:10;
+}
+ 
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:52px;
+    margin:0;
+    border:2px solid white;
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    -webkit-user-select: none;
+    user-select:none;
+    font-family:sans-serif;
+    font-size:14px;
+    transition:all 0.5s;
+    cursor:pointer;
+}
+
+#ninja-slider-prev {
+    left:auto; right:50%;
+	margin-right:-2px;
+}
+
+#ninja-slider-next {
+    left:50%; right:auto;
+}
+
+#ninja-slider-prev:hover, #ninja-slider-next:hover {width:80px;background-color:rgba(0,0,0,0.6);}
+
+/*pagination within the prev/next buttons*/
+#ninja-slider-prev div, #ninja-slider-next div {white-space:nowrap;opacity:0;position:absolute;}
+#ninja-slider-prev div {left:6px;}
+#ninja-slider-next div {right:6px;}
+#ninja-slider-prev:hover div, #ninja-slider-next:hover div {opacity:1;}
+#ninja-slider-prev:hover.disabled, #ninja-slider-next:hover.disabled {opacity:0.1;cursor:default;}
+
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    right:15px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    left:15px;
+}
+
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager, #ninja-slider-pause-play { display:none;} 
+
+
+/*Responsive settings*/
+@media only screen and (max-width:500px){
+
+    #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:1100px){    
+    #ninja-slider .caption {
+        font-size:7em;
+    }
+}
+
+@media only screen and (max-width:700px){    
+    #ninja-slider .caption {
+        font-size:3em;
+    }
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Style the search field */
+form.example input[type=text] {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  background: #292c2f;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: white;
+  color: black;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.custinfo {
+	text-align: center;
+	width: 100%;
+}
